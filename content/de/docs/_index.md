@@ -12,7 +12,7 @@ Dies ist die Dokumentation der Juniper-Version von FOLIO. Im Release-Menü wechs
 
 Willkommen zur FOLIO-Dokumentation. FOLIO ist ein Open-Source-Projekt, das einen Paradigmenwechsel bei der Zusammenarbeit von Bibliotheken, Entwicklungsteams und Firmen darstellt. Diese offene Plattform bringt den Markt weit jenseits traditioneller Bibliotheksmanagementsysteme und eröffnet den Bibliotheken mehr Auswahl bei Funkionalität und Service.
 
-![Einführung in FOLIO](/img/FOLIO_6.png)
+![Einführung in FOLIO](FOLIO_6.png)
 
 ## Ein modernes Bibliotheksökosystem
 

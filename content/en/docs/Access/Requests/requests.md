@@ -1,7 +1,7 @@
 ---
 title: "Requests"
 linkTitle: "Requests"
-date: 2022-09-20
+date: 2022-11-10
 weight: 50
 ---
 
@@ -13,7 +13,7 @@ Item level requests are made on an individual item record and are the default ty
 
 Title level requests are made on the instance level. FOLIO chooses the item from the holdings on that instance to fill the request, whether the item is available immediately or becomes available when the item is returned.
 
-Libraries can turn on title-level requests in [Settings > Circulation > Title level requests]({{< ref "/settings_circulation.md#.settings--circulation--title-level-requests">}}).
+Libraries can turn on title-level requests in [Settings > Circulation > Title level requests]({{< ref "settings_circulation.md#settings--circulation--title-level-requests" >}}).
 
 Libraries that want to use title level requests should consider:
 
@@ -83,7 +83,7 @@ Requesting is controlled by circulation rules and item statuses. Some item statu
     2. Once you find the requester, select them from the **User Search Results** list. They are applied to the request and their information appears.
 7. Select the **Fulfillment preference**.
 8. Select the **Pickup service point** or **Delivery address**, depending on your selection in the previous step.
-9. Click **Save & close**. The request is saved and the Request Detail pane appears. The patron receives an email notification saying their request was received by the library, [if you have this notification configured.]({{< ref "/settings_circulation.md#patron-notice-policies" >}})
+9. Click **Save & close**. The request is saved and the Request Detail pane appears. The patron receives an email notification saying their request was received by the library, [if you have this notification configured.]({{< ref "settings_circulation.md#patron-notice-policies" >}})
 
 ### Editing an item level request
 
@@ -112,7 +112,7 @@ Any open request can be duplicated, as long as the request being created through
 
 You can move a request from one item to another on the same instance. You may want to do this if a request item goes missing or if you need to balance request queues.
 
-Note: If a recall request is moved to a loan item that wasn’t previously recalled, the loan will be recalled--the patron gets a recall notice, [if configured,]({{< ref "/settings_circulation.md#patron-notice-policies" >}}) and the loan’s due date may be truncated or extended, depending on the associated loan policy.
+Note: If a recall request is moved to a loan item that wasn’t previously recalled, the loan will be recalled--the patron gets a recall notice, [if configured,]({{< ref "settings_circulation.md#patron-notice-policies" >}}) and the loan’s due date may be truncated or extended, depending on the associated loan policy.
 
 1. [Find the request you want to move.](#searching-for-requests)
 2. In the **Request Detail** pane, select **Actions > Move request**.
@@ -142,7 +142,7 @@ Note: When cancelling a request, you should consider the following:
 2. In the **Request Detail** pane, select **Actions > Cancel request**.
 3. In the **Confirm request cancellation** dialog, select the **Reason for cancellation**.
 4. Optional: Enter any additional notes on the cancellation in the **Additional information for patron** box. If you selected **Other**, then you must supply additional information.
-5. Click **Confirm**. The dialog closes and the request is cancelled. The Request status is updated to Closed - Cancelled and the patron receives a cancellation notification email, [if you have this notification configured.]({{< ref "/settings_circulation.md#patron-notice-policies" >}})
+5. Click **Confirm**. The dialog closes and the request is cancelled. The Request status is updated to Closed - Cancelled and the patron receives a cancellation notification email, [if you have this notification configured.]({{< ref "settings_circulation.md#patron-notice-policies" >}})
 
 ## Title level requesting
 
@@ -150,7 +150,7 @@ Note: When cancelling a request, you should consider the following:
 
 Library staff create requests in the Request app.  They can also start the request process from a user record in Users, or an item record in Inventory; those apps will route you into the Requests app to create the request. 
 
-Note that you must have permission to create requests in the Requests app in order to see the option to create a request from Inventory.
+Note that you must have permission to create requests in the Requests app in order to see the option to create a request from Inventory. Also note that a title-level request can only be placed on an instance if that instance has a holdings record. An item record is not required to create the request, but it is required to fill the request.
 
 1. In the **Requests** pane, select **Actions > New**.
 2. To create a title level request, make sure **Create title level request is checked.**.
@@ -183,7 +183,7 @@ If no items are available on the instance when the request is created, the reque
 
 If the request is a hold, it will remain in the request queue for the title, but it will not be associated with an item until the request is first in the queue and an item is returned.
 
-If the request is a recall, the recall will apply to the loan with a due date closest to the current due date . When the item is returned, it goes to the first open request, regardless of whether that request is the recall that triggered the item's return.
+If the request is a recall, the recall will apply to the loan with a due date closest to the current due date. When the item is returned, it goes to the first open request, regardless of whether that request is the recall that triggered the item's return.
 
 ### Viewing Title Level Requests
 
@@ -236,8 +236,6 @@ In this section, the **Item barcode** column may contain item information, or it
 * Item level request - you will see the barcode of the requested item.
 * Title level recall - you will see the barcode of the item that was recalled. Note that if the item is returned and it could fill a request that is higher in the queue, it will fill that request, not the request that triggered the recall.
 * Title level hold request - the **Item barcode** column will be empty.
-
-If there are requests in the queue that have a status of **Closed - pickup expired**, the queue numbers may be incorrect because the closed request is no longer visible. This is a known issue that is planned to be fixed in Nolana.
  
 ### Canceling a title level request
 
@@ -304,7 +302,7 @@ To create a pick report, follow these steps:
 
 The pick slips report generates a single slip for every paged item that needs to be pulled from the shelf. This report automatically prints only those items whose Effective location is associated with the currently selected service point. Therefore, you must be signed in to the service point you want to generate the slips for. If there are no items matching the report’s criteria, the option appears grayed out.
 
-You can configure the information that appears on the pick slips in the [Settings app]({{< ref "/settings_circulation.md#settings--circulation--staff-slips" >}}).
+You can configure the information that appears on the pick slips in the [Settings app]({{< ref "settings_circulation.md#settings--circulation--staff-slips" >}}).
 
 To print pick slips, in the Requests pane, select **Actions > Print pick slips for [your service point]**. A print dialog appears.
 

@@ -13,14 +13,12 @@ The Circulation section of the Settings app is where you establish your loan pol
 
 Each setting within Circulation has its own permission associated with it. If a user has one of the below permissions assigned to their user record, they will be able to view and interact with that particular setting. You can assign permissions to users in the Users app.
 
-The following are all the Circulation Settings permissions presented in the order the configurations appear in the Settings app:
-
+The following are all the Circulation Settings permissions:
 
 * **Settings (Circ): Can create, edit and remove circulation rules.** This permission allows the user to create, read, update, and delete circulation rules.
 * **Settings (Circ): Can create, edit and remove other settings.** This permission allows the user to create, read, update, and delete other settings.
-* **Settings (Circ): Can create, edit and remove staff slips.** This permission allows the user to create, read, update, and delete staff slips.
+* **Settings (Circ): Can create, edit and remove staff slips.** This permission allows the user to create, read, and update staff slips. Note that the content of staff slips can be erased in the editor, but the staff slip itself cannot be deleted.
 * **Settings (Circ): Can create, edit and remove fixed due date schedules.** This permission allows the user to create, read, update, and delete fixed due date schedules.
-* **Settings (Circ): Can view loan history.** This permission allows the user to view loan history settings.
 * **Settings (Circ): Can create, edit and remove loan policies.** This permission allows the user to create, read, update, and delete loan policies.
 * **Settings (Circ): Can create, edit and remove overdue fine policies.** This permission allows the user to create, read, update, and delete overdue fine policies.
 * **Settings (Circ): Can create, edit and remove lost item fee policies.** This permission allows the user to create, read, update, and delete lost item fee policies.
@@ -28,6 +26,12 @@ The following are all the Circulation Settings permissions presented in the orde
 * **Settings (Circ): Can create, edit and remove patron notice templates.** This permission allows the user to create, read, update, and delete patron notice templates.
 * **Settings (Circ): Can create, edit and remove cancellation reasons.** This permission allows the user to create, read, update, and delete request cancellation reasons.
 * **Settings (Circ): Can create, edit and remove request policies.** This permission allows the user to create, read, update, and delete request policies.
+* **Settings (Circ): Can view loan history.** This permission allows the user to view settings in Settings \> Circulation \> Loan anonymization.
+* **Settings (Circ): Can edit loan history.** This permission allows the user to edit settings in Settings \> Circulation \> Loan anonymization.
+* **Settings (Circ): Can view loan policies.** This permission allows the user to view loan policies but does not allow create, edit or delete.
+* **Settings (Circ): Can view lost item fee policies.** This permission allows the user to view lost item fee policies but does not allow create, edit or delete.
+* **Settings (Circ): Can view overdue fine policies.** This permission allows the user to view overdue fine policies but does not allow create, edit or delete. 
+* **Settings (Circulation): Title level request edit.** This permission allows users to enable and configure title-level requesting. Note that if title level requesting is enabled, and a title-level request is created, it can no longer be turned off via Settings.
 
 
 ## Settings > Circulation > Circulation rules
@@ -35,8 +39,6 @@ The following are all the Circulation Settings permissions presented in the orde
 Libraries can use circulation rules to determine how their items circulate. Circulation rules follow FOLIO specific criteria and logic. Each circulation rule is made up of one or more criteria and the policies to be associated with those criteria. When a defined set of criteria matches a circulation action, the policies that are attached to that criteria are then applied. The guidelines for constructing circulation rules are found in the [FOLIO GitHub Circulation rules documentation](https://github.com/folio-org/mod-circulation/blob/master/doc/circulationrules.md).
 
 You can write circulation rules to determine the following:
-
-
 
 * The groups of patrons that can borrow items.
 * The rules for items in different locations, libraries, campuses, or institutions.
@@ -113,8 +115,7 @@ This setting is turned on by default with an inactivity period of 3 minutes.
 
 Audio alerts can be turned on to signal to library staff when a checkout is successful or fails. This setting is turned off by default.
 
-To enable audio alerts, select **Yes** from the drop-down list.
-
+To enable audio alerts, select **Yes** from the drop-down list. Select your desired audio-alerts theme from the drop-down.
 
 ### Perform wildcard lookup of items by barcode in circulation apps (Check in, Check out)
 
@@ -133,16 +134,28 @@ Staff slips allow you to configure the information that appears on your staff sl
 * **Request delivery.** This slip is available in the Check in app, when you check in an item with a delivery request.
 * **Transit.** This slip is available in the Check in app, when you check in an item that is in transit to another location.
 
+### Using tokens with staff slips
+
+There are six categories of available tokens for use with staff slips, listed in the table below. All of the categories appear as options in the staff slip editor, but some categories will only populate with information for some types of staff slips. 
+
+|Token category|Populates with these staff slips|Does not populate with these staff slips|
+|---|---|---|
+|Item|Hold slip, Pick slip, Request delivery, Transit||
+|Effective location|Hold slip, Pick slip, Request delivery, Transit||
+|Staff slip|Hold slip, Pick slip, Request delivery, Transit||
+|Request|Hold slip|Pick slip, Request delivery, Transit| 
+|Request delivery address|Request delivery|Hold slip, Pick slip, Transit|
+|Requester|Hold slip, Pick slip, Request delivery|Transit|
+
 
 ### Configuring a staff slip
 
 1. In the **Staff slips** pane, select the staff slip you want to configure.
 2. In the **staff slip details** pane, click **Edit**.
 3. Optional: In the **staff slip** window, enter a **Description** in the box.
-4. Use the Display box to edit the slip. Click **{ }** to add tokens to the slip. Tokens fill in item or user information based on the selected variables related to the slip event.
+4. Use the Display box to edit the slip. Click **{ }** to add tokens to the slip.
 5. Optional: Click **Preview** to view a preview of the slip.
 6. Click **Save & close**. The slip is saved and updated.
-
 
 ### Previewing a staff slip
 
@@ -184,13 +197,11 @@ Fixed due date schedules are used in Loan policies when you want to have a loan 
 4. In the **Delete fixed due date schedule** dialog, click **Delete**. The fixed due date schedule is deleted and a confirmation message appears.
 
 
-## Settings > Circulation > Loan history
+## Settings > Circulation > Loan anonymization
 
-Loan history allows you to anonymize closed loans. When closed loans are anonymized, all related patron information is removed from the loan, but the action will still appear in the Circulation log.
-
+When closed loans are anonymized, all related patron information is removed from the loan, but the action will still appear in the Circulation log.
 
 ### Closed loans
-
 
 #### Anonymize closed loans
 
@@ -313,7 +324,7 @@ If you selected **Rolling**, you will see the following fields:
 
 Determine whether you want to allow recalls and/or holds.
 
-All of the fields in this section are optional. Note: If you leave them blank, the policy does not allow recalls or holds.
+All of the fields in this section are optional. If you leave them blank, the recall return interval and minimum guaranteed loan period default to zero.
 
 
 ##### Recalls
@@ -393,7 +404,7 @@ Overdue fine policies determine the amount of fines that accrue when a patron ha
 4. Click **Save & close**. The overdue fine policy is updated.
 
 
-### Deleting a loan policy
+### Deleting an overdue fine policy
 
 1. In the **Overdue fine policies** pane, select the overdue fine policy you want to delete.
 2. In the **Overdue fine policy details** pane, click **Actions > Delete**.

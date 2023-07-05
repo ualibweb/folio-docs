@@ -1,7 +1,7 @@
 ---
 title: "Inventory"
 linkTitle: "Inventory"
-date: 2022-04-21
+date: 2022-09-22
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -337,10 +337,10 @@ Note: Adding a classification is optional, but if you click **Add classification
 
 ### Instance relationship (analytics and bound-with)
 
-In the Instance relationship section, you can add any relationships between the instance and other instances. This is not the same as the Bound-with data in the Holdings record.
+In the Instance relationship section, you can add any relationships between the instance and other instances.
 
--   **Parent instances.** The parent instance is the record chosen as the primary record and to which all other child records are linked. Information about parent instances (Title, Instance HRID, Publisher, Publication date, ISBN, ISSN) including a link to the corresponding parent instance record displays on the child instance record(s).
--   **Child instances.** A child instance record is any record that has been associated with a parent record. Information about child instances (Title, Instance HRID, Publisher, Publication date, ISBN, ISSN) including a link to each corresponding child instance record displays on the parent instance record.
+-   **Parent instances.** The main link in a bound-with situation: It will have an item record (and thus barcode) that all other bibliographic records associated with a given bound-with volume can link to. Child records are those associated bibliographic records. Child records will have LKR fields in the bibliographic record that include the ADM number of the parent record and "Enum. Level.1" information found in the parent record's item record. Doing this allows all item record information in the parent record to display in the child record, so the same barcode, sublibrary, collection, description, call number, etc. will show up for all titles in a bound-with.
+-   **Child instances.** Associated with linking bound-withs, which allows for "links" between separate bibliographic records and/or a bibliographic record and items belonging to another bibliographic record. Child records are those associated bibliographic records.
 
 #### Adding a parent instance
 
@@ -460,8 +460,7 @@ A check in or check out note is required by default.
 Note: Import options are configured in [Settings \> Inventory \> Integrations]((../../settings/settings_inventory/settings_inventory/#settings--inventory--integrations). 
 
 1.  In the default or middle pane, click **Actions > Import**.
-2.  In the **Single Record Import** dialog box, verify or select the External target (source) of the record to be imported.
-3.  Verify or select the profile to be used.
+2.  In the **Single Record Import** dialog box, select the source of the record to be imported (e.g., Library of Congress, OCLC WorldCat, BnF).
 3.  Enter the record number, without any prefixes, in the **Enter [source] identifier** box.
 4.  Click **Import**.
 
@@ -825,13 +824,10 @@ To search, first select the record type (instance, holdings, or item); enter you
 -   **ISBN.** Searches the number exactly as it appears in the data. For example, if there are hyphens in the data, the hyphens must be entered in the search.
 -   **ISSN.** Searches should include hyphens.
 -   **OCLC number, normalized.** Searches for the OCLC number with or without any prefixes.
--   **Instance notes (all).** Keyword search across all Instance notes; includes administrative notes. 
--   **Instance administrative notes.** Keyword search of instance record administrative notes.
 -   **Subject.** Keyword search through all subject fields. This may include Library of Congress Subjects, FAST, and other subject vocabularies, including Genre/Form terms.
 -   **Effective call number (item), shelving order.** Retrieves Instance records based on the shelving order element in the item record.
 -   **Instance HRID.** Human readable identifier for the instance record.
 -   **Instance UUID.** Universally unique identifier for the instance record.
--   **Authority UUID.** Universally unique identifier for an authority record stored in FOLIO. This searches for UUIDs in bibliographic data where a field is linked to and controlled by an authority record. This value is stored in a $9 the bibliographic record (visible via “View source”).
 -   **All.** Searches across all fields in all record types. May impact performance.
 -   **Query search.** A search for advanced users to query by property names using CQL.
 -   **Browse call numbers.** The call number browse is based on the shelving order element in the item record; only Instances with item records will be retrieved. It includes LC, Dewey Decimal, NLM, SuDoc and Local call numbers.
@@ -839,16 +835,11 @@ To search, first select the record type (instance, holdings, or item); enter you
 -   **Browse subjects.** The subject browse is based on the Subject field in instance records.
 -   **Call number, eye readable.** Requires you to enter the call number exactly as it appears in the holdings record, including punctuation.
 -   **Call number, normalized.** Ignores any characters other than numbers and letters, such as punctuation and spaces.
--   **Holdings notes (all).** Keyword search across all Holdings notes; includes administrative notes. 
--   **Holdings administrative notes.** Keyword search of holdings record administrative notes.
 -   **Holdings HRID.** Human readable identifier for the holdings record.
 -   **Holdings UUID.** Universally unique identifier for the holdings record.
 -   **Barcode.** Allows you to scan, copy/paste, or type a barcode.
 -   **Effective call number (item) eye readable.** Requires you to enter the call number exactly as it appears in the holdings record, including the punctuation and call number prefix.
 -   **Effective call number (item), normalized.** Ignores any characters other than numbers and letters, such as punctuation and spaces.
--   **Item notes (all).** Keyword search across all item notes; includes administrative notes, check in and check out notes.
--   **IItem administrative notes.** Keyword search of item record administrative notes.
--   **Circulation notes.** Keyword search across check in and check out notes.
 -   **Item HRID.** Human readable identifier for the item record.
 -   **Item UUID.** Universally unique identifier for the item record.
 
@@ -1056,8 +1047,7 @@ See [Editing a MARC record using quickMARC](quickmarc/#Editing a MARC record usi
 
 1.  [Find the instance](#searching-for-a-record) you want to edit and select it.
 2.  In the **Instance record details** pane, click **Actions \> Overlay source bibliographic record**.
-3. In the **Re-import** dialog box, verify or select the External target (source) of the record to be imported.
-3.  Verify or select the profile to be used to overlay the current data.
+3. In the **Single Record Import** dialog box, select the source of the record to be imported (e.g., Library of Congress, OCLC WorldCat, BnF).
 4.  Enter the record number, without any prefixes, in the **Enter [source] identifier** box.
 5.  Click **Import**.
 

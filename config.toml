@@ -1,6 +1,6 @@
 # baseURL = "/"
-baseURL = "https://docs.folio.org/"
-title = "FOLIO Documentation"
+baseURL = "https://morning-glory.docs.folio.org/"
+title = "FOLIO Documentation - Morning Glory"
 
 enableRobotsTXT = true
 
@@ -121,32 +121,28 @@ algolia_docsearch = true
 offlineSearch = false
 
 [[params.versions]]
-  version = "Nolana"
-  url = "https://nolana.docs.folio.org/docs/"
-
-[[params.versions]]
   version = "Morning Glory"
-  url = "https://morning-glory.docs.folio.org/docs/"
+  url = "https://morning-glory.docs.folio.org/docs"
 
 [[params.versions]]
   version = "Lotus"
-  url = "https://lotus.docs.folio.org/docs/"
+  url = "https://lotus.docs.folio.org/docs"
 
 [[params.versions]]
   version = "Kiwi"
-  url = "https://kiwi.docs.folio.org/docs/"
+  url = "https://kiwi.docs.folio.org/docs"
 
 [[params.versions]]
   version = "Juniper"
-  url = "https://juniper.docs.folio.org/docs/"
+  url = "https://juniper.docs.folio.org/docs"
 
 [[params.versions]]
   version = "Iris"
-  url = "https://iris.docs.folio.org/docs/"
+  url = "https://iris.docs.folio.org/docs"
 
 [[params.versions]]
   version = "Honeysuckle"
-  url = "https://honeysuckle.docs.folio.org/docs/"
+  url = "https://honeysuckle.docs.folio.org/docs"
 
 # User interface configuration
 [params.ui]
@@ -194,6 +190,11 @@ enable = false
 	url = "https://slack-invitation.folio.org/"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers"
+[[params.links.developer]]
+	name = "Discuss"
+	url = "https://discuss.folio.org/"
+	icon = "fa fa-comment-alt"
+        desc = "Discuss development issues around the project"
 
 #From Arnon
 [[menu.main]]
@@ -208,3 +209,8 @@ enable = false
     url = "https://wiki.folio.org"
     weight = 20
 
+[[menu.main]]
+    identifier = "discussion"
+    name = "Discussion Boards"
+    url = "https://discuss.folio.org"
+    weight = 30

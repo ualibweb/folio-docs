@@ -5,7 +5,7 @@ date: 2022-06-07
 weight: 50
 ---
 
-Keyboard shortcuts allow you to perform actions using the keyboard.  These shortcuts are shared across several apps in FOLIO.  For the [apps listed below](#list-of-apps-displaying-the-shortcut-list), you can [view the list of shortcuts](#viewing-the-keyboard-shortcuts-list) while using the app.
+Keyboard shortcuts allow you to perform actions using the keyboard.  These shortcuts are shared across several apps in FOLIO.  For the [apps listed below](#list-of-apps-displaying-shortcuts), you can [view the list of shortcuts](#viewing-the-keyboard-shortcuts-list) while using the app.  
 
 ## Keyboard shortcuts list
  
@@ -19,8 +19,9 @@ Keyboard shortcuts allow you to perform actions using the keyboard.  These short
 | Collapse all accordions          | Ctrl+alt+g    |
 | Go to Search & Filter pane       | Ctrl+alt+h    |
 | View keyboard shortcuts list     | Ctrl+alt+k    |
+ 
 | Duplicate a record               | Alt+c         |
-| Add POL                          | Alt+a         |
+| Add POL               | Alt+a         |
 | Close a modal or pop-up          | Esc           |
 | Copy                             | Ctrl+c        |
 | Cut                              | Ctrl+x        |

@@ -77,7 +77,7 @@ When a patron requests an item, checking the item in at its requested pickup ser
 
 1. Either scan the barcode of the item, or enter the barcode and click **Enter**. An **Awaiting pickup for a request** dialog appears noting the item is awaiting pickup and lists its pickup service point.
 2. If you do not want to print a hold slip, clear the **Print slip** checkbox if it is checked.
-3. Click **Close** to exit and print a hold slip, if selected. The item appears in the Scanned Items table and its status changes to Awaiting pickup. FOLIO automatically sets the hold shelf expiration date/time on the request record, following the settings for date management for the pickup service point. If configured in the notice policy, a pickup notice is sent to the patron once the check in session ends.
+3. Click **Close** to exit and print a hold slip, if selected. The item appears in the Scanned Items table and its status changes to Awaiting pickup. If configured, a pickup notice is sent to the patron once the check in session ends.
 
 
 ## Checking in an item with a request (delivery fulfillment)
@@ -112,7 +112,7 @@ For example, if your library was closed because of an emergency, you can mark al
 
 ## Anonymizing a loan that has been checked in
 
-A library can configure FOLIO to anonymize loans after they have been checked in. Anonymizing removes the link between the loan record and the user record for the patron who borrowed the item. Your library can configure anonymization options in [**Settings > Circulation > Loan anonymization**](../../../settings/settings_circulation/settings_circulation/#settings--circulation--loan-anonymization).
+A library can configure FOLIO to anonymize loans after they have been checked in. Anonymizing removes the link between the loan record and the user record for the patron who borrowed the item. Your library can configure anonymization options in [**Settings > Circulation > Loans > Loan History**](../../../settings/settings_circulation/settings_circulation/#settings--circulation--loan-history).
 
  If you select *Anonymize closed loans immediately after loan closes*, anonymization will occur after the check in session ends. The anonymization process is scheduled by your system administrator or hosting provider.
 

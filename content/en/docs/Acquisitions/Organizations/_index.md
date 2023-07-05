@@ -1,7 +1,7 @@
 ---
 title: "Organizations"
 linkTitle: "Organizations"
-date: 2022-12-02
+date: 2022-06-07
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -109,7 +109,7 @@ Categories for contact information are configured in the Settings app. If you as
 
 2. Fill in the address information.
 
-3. Repeat as needed. The address saves once you save the organization. Note: If you are adding multiple addresses, select the **Use as primary address** checkbox at the top of the organization’s primary address.  The primary address is included in the invoice voucher extract.  See [Invoices > Voucher information](../invoices/#voucher-information) for more information.
+3. Repeat as needed. The address saves once you save the organization. Note: If you are adding multiple addresses, select the **Use as primary address** checkbox at the top of the organization’s primary address.  The primary address is included in the invoice voucher extract.  See [Invoices > Voucher information](../../invoices/#voucher-information) for more information. 
 
 
 #### Deleting an address
@@ -553,7 +553,7 @@ To view a log of orders exported to a vendor organization that is set up for EDI
 
 2. In the **Organization details** pane, click **Actions > View export log**.
 
-3. The Export Manager app opens with the Search & Filter pane set to view exports related to the selected vendor organization.  See the [Export Manager documentation](../../export-manager#viewing-export-jobs) for more information about viewing export jobs.
+3. The Export Manager app opens with the Search & Filter pane set to view exports related to the selected vendor organization.
 
 
 ## Adding a tag to an organization

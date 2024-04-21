@@ -98,7 +98,7 @@ For testing FOLIO installation on a PC, it's recommended to use Vagrant to separ
    sudo update-java-alternatives --jre-headless --jre --set java-1.11.0-openjdk-amd64
    ```
 
-3. Import the PostgreSQL signing key, add the PostgreSQL apt repository and install PostgreSQL.
+3. Import the PostgreSQL signing key, add the PostgreSQL apt repository, and install PostgreSQL.
    ```
    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
    sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main"
@@ -108,8 +108,8 @@ For testing FOLIO installation on a PC, it's recommended to use Vagrant to separ
 
 4. Configure PostgreSQL to listen on all interfaces and allow connections from all addresses (to allow Docker connections).
 
-   * Edit (via sudo) the file **/etc/postgresql/12/main/postgresql.conf** to add line **listen_addresses = '\*'** in the "Connection Settings" section.
-   * In the same file, increase **max_connections** (e.g. to 500)
+   * Edit (via sudo) the file **/etc/postgresql/12/main/postgresql.conf** to add line **listen_addresses = '\*'** under the "Connection Settings" line in the "Connections and Authentication" setting.
+   * In the same file, increase **max_connections** (e.g. to 500). Save and close the file.
    * Edit (via sudo) the file **/etc/postgresql/12/main/pg_hba.conf** to add line **host all all 0.0.0.0/0 md5**
    * Restart PostgreSQL with command **sudo systemctl restart postgresql**
 

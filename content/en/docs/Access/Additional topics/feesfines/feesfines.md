@@ -206,7 +206,7 @@ Reminder process:
 * The second sequence will create a second reminder with an email using the selected notice template. The email is sent out three plus one equals **four** days after the previous reminder (Saturday in the example). A 3.00 fee is charged.
 * The third sequence will create a third reminder with an email using the selected notice template. The email is sent out three plus one equals **four** days after the previous reminder (Wednesday in the example). A 6.00 fee is charged.
 
-  ### Reminder fee examples with closed days
+### Reminder fee examples with closed days
 
 #### Create on closed days set to Yes
 

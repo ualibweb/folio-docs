@@ -1144,7 +1144,7 @@ To move items to a different holdings record within the same instance record, fo
 
 ## Deleting an instance record
 
-Note: This is only a soft delete. When a record is set for deletion, the instance will be Suppressed from discovery and Staff suppressed. If the instance source is MARC, then the MARC LDR 05 will be set to "d"
+Note: This is only a soft delete. When a record is set for deletion, the instance will be Suppressed from discovery and Staff suppressed. If the instance source is MARC, then the MARC LDR 05 will be set to "d".
 
 1.  [Find the instance](#searching-for-a-record) you want to delete and select it.
 2.  In the **Instance record details** pane, click **Actions \> Set record for deletion**.

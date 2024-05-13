@@ -406,6 +406,28 @@ Use this setting to configure available transfer accounts. Transfer accounts are
 
 The **Transfer Criteria** section contains many sections to allow for a wide variety of criteria to be configured. Use this information to configure the criteria for transferring accounts. For more information about transfer accounts, see [Settings \> Users \> Transfer accounts](#settings--users--transfer-accounts).
 
+### What is the Bursar Export?
+
+The Bursar Export (BEf) function in FOLIO is intended for a library to create a completely custom export file for fees and fines, to be used by their college/university’s financial offices.
+
+The BEf allows libraries to create a file, for export and use with external financial systems, that is very specific to your needs, with custom headers, columns, column spacing, line endings, header titles, arbitrary text or characters preceding or following variable data / table data, etc.
+
+That is, the file structure can be 100% customized, with every single character in the export file available for manipulation, appending, or repositioning.
+
+Specifically this would look like:
+
+- Custom headers - can contain a name, or appended characters, or specific integer identifiers, specific numbers or combinations of characters and spaced, etc.
+- Custom spacing between columns, both in terms of integers and ASCII characters. Each column spacer and column can be different from any other in the export document.
+- Custom columns composed of any number of data choices, or characters.
+- Custom column spacers - any character or ASCII character spacer, or variable from your tables.
+- Tool supports the customization of line spacing, when new lines occur, the addition of any number or kind of text or integers a column, or column spacer, or header, or even appended to the data itself.
+
+Each institution’s financial offices require often very different, and very specific files to be ingested by their financial systems, and are usually intended as machine-readable only. Therefore the BEf allows for every single character space to be manipulated until you have a format/template that works with your institution.
+
+We have an example creation process detailed in the information below. Following this example process/file creation process should result in the creation of an actual example Bursar file.
+
+We also recommend that you follow the steps of our practice JIRA tests, which - if the user follows the steps outlined and specified in the test to create the file, demonstrates to the user *how* to create a working file from our test data.
+
 ### Create transfer criteria
 
 In the **Transfer criteria** pane, select the **Schedule period**.
